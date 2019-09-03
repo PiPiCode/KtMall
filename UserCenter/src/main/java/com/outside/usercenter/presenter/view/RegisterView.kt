@@ -11,5 +11,5 @@ import com.outside.baselibrary.presenter.view.BaseView
 
 interface RegisterView :BaseView {
 
-    fun onRegisterResult(b:Boolean)
+    fun onRegisterResult(result:String)
 }

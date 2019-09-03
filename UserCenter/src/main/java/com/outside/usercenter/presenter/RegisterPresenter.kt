@@ -3,7 +3,6 @@ package com.outside.usercenter.presenter
 import com.kotlin.base.ext.excute
 import com.outside.baselibrary.presenter.BasePresenter
 import com.outside.baselibrary.rx.BaseObserver
-import com.outside.usercenter.service.impl.UserServiceImpl
 import com.outside.usercenter.presenter.view.RegisterView
 import com.outside.usercenter.service.UserService
 import javax.inject.Inject
@@ -20,15 +19,22 @@ class RegisterPresenter @Inject constructor(): BasePresenter<RegisterView>(){
 
     @Inject
     lateinit var userService: UserService
+
     fun register(phone: String, verifyCode: String, pwd: String) {
 
+        if (!checkNetWork()){
+            return
+        }
+        mView.showLoading()
 
         userService.register(phone, verifyCode, pwd)
-            .excute(object :BaseObserver<Boolean>(){
+            .excute(object :BaseObserver<Boolean>(mView){
                 override fun onNext(t: Boolean) {
-                    mView.onRegisterResult(t)
+                    if (t){
+                        mView.onRegisterResult("注册成功")
+                    }
                 }
-            })
-
+            },lifecycleProvider)
     }
+
 }

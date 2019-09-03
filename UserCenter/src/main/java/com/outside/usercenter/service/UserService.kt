@@ -1,5 +1,6 @@
 package com.outside.usercenter.service
 
+import com.outside.usercenter.data.protocol.UserInfo
 import io.reactivex.Observable
 
 /**
@@ -12,4 +13,7 @@ import io.reactivex.Observable
 interface UserService {
 
     fun register(phone: String, verifyCode: String, pwd: String): Observable<Boolean>
+    fun login(phone: String, pwd: String, pushId: String): Observable<UserInfo>
+    fun forgetPwd(phone: String, verifyCode: String): Observable<Boolean>
+    fun resetPwd(phone: String, pwd: String): Observable<Boolean>
 }

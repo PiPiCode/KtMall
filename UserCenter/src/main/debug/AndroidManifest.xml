@@ -10,15 +10,21 @@
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name="com.outside.baselibrary.common.BaseApplication"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.activity.RegisterActivity">
+        <activity android:name=".ui.activity.RegisterActivity"/>
+
+        <activity android:name=".ui.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.ForgetPwdActivity"/>
+        <activity android:name=".ui.activity.ResetPwdActivity"/>
+        <activity android:name=".ui.activity.UserInfoActivity"/>
         <meta-data
             android:name="android.max_aspect"
             android:value="2.4" />

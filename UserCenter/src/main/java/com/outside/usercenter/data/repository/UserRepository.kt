@@ -3,7 +3,7 @@ package com.outside.usercenter.data.repository
 import com.outside.baselibrary.data.net.RetrofitFactory
 import com.outside.baselibrary.data.protocol.BaseResp
 import com.outside.usercenter.data.api.UserAPi
-import com.outside.usercenter.data.protocol.RegisterReq
+import com.outside.usercenter.data.protocol.*
 import io.reactivex.Observable
 import javax.inject.Inject
 
@@ -14,11 +14,31 @@ import javax.inject.Inject
  * creatTime:    2019/9/2 17:49
  */
 
-class UserRepository @Inject constructor(){
+class UserRepository @Inject constructor() {
 
-    //注册请求
+    //注册访问网络请求 返回Observable对象
     fun register(phone: String, verifyCode: String, pwd: String): Observable<BaseResp<String>> {
         return RetrofitFactory.instance.create(UserAPi::class.java)
             .register(RegisterReq(phone, pwd, verifyCode))
+    }
+
+
+    //登录访问网络请求 返回Observable对象
+    fun login(phone: String, pwd: String, pushId: String): Observable<BaseResp<UserInfo>> {
+        return RetrofitFactory.instance.create(UserAPi::class.java)
+            .login(LoginReq(phone, pwd, pushId))
+    }
+
+    //忘记密码访问网络请求 返回Observable对象
+    fun forgetPwd(phone: String, code: String): Observable<BaseResp<Boolean>> {
+        return RetrofitFactory.instance.create(UserAPi::class.java)
+            .forgetPwd(ForgetPwdReq(phone, code))
+    }
+
+
+    //登录访问网络请求 返回Observable对象
+    fun resetPwd(phone: String, pwd: String): Observable<BaseResp<Boolean>> {
+        return RetrofitFactory.instance.create(UserAPi::class.java)
+            .resetPwd(ResetPwdReq(phone, pwd))
     }
 }

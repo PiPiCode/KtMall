@@ -3,6 +3,7 @@ package com.outside.baselibrary.common
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
+import androidx.multidex.MultiDexApplication
 import com.outside.baselibrary.injection.component.AppComponent
 import com.outside.baselibrary.injection.component.DaggerAppComponent
 import com.outside.baselibrary.injection.module.AppModule
@@ -14,8 +15,7 @@ import com.outside.baselibrary.injection.module.AppModule
  * creatTime:    2019/9/3 9:44
  */
  
-class BaseApplication :Application(){
-
+class BaseApplication :MultiDexApplication(){
 
     lateinit var appComponent:AppComponent
 
@@ -31,11 +31,6 @@ class BaseApplication :Application(){
 
     companion object{
         lateinit var  context: Context
-    }
-
-    override fun attachBaseContext(base: Context?) {
-        super.attachBaseContext(base)
-        MultiDex.install(this)
     }
 
 }

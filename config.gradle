@@ -30,8 +30,9 @@ ext {
             circle_imageview     : "3.0.1",
             take_photo           : "4.0.3",
             alert                : "1.0.3",
-            multidex             : "1.0.1"
-
+            multidex             : "1.0.1",
+            qiniuyun             : "7.3.15",
+            bottomNavigationBar  : "2.0.2"
 
     ]
 
@@ -76,13 +77,15 @@ ext {
     //底部导航
     bottomBar = "com.roughike:bottom-bar:$dependVersion.bottom_bar"
 
-
     circleimageview = "de.hdodenhof:circleimageview:$dependVersion.circle_imageview"
 
     takePhoto = "com.jph.takephoto:takephoto_library:$dependVersion.take_photo"
 
     alert = "com.bigkoo:alertview:$dependVersion.alert"
 
+    qiniuyun = "com.qiniu:qiniu-android-sdk:$dependVersion.qiniuyun"
+
+    bottom_navigation_bar = "com.ashokvarma.android:bottom-navigation-bar:$dependVersion.bottomNavigationBar"
     //基础支持库
     supportLibs = supportDeps.values()
 
@@ -90,8 +93,9 @@ ext {
     rxLibs = rx.values()
 
     //其他第三方库合集
-    otherLibs = [dagger2, glide, bottomBar, autoSize, immersionBar, immersionbarFragment,
-                 immersionbarKotlin, circleimageview, takePhoto, alert,multidex]
+    otherLibs = [dagger2, glide, bottomBar, autoSize, immersionBar,
+                 immersionbarFragment, immersionbarKotlin, circleimageview,
+                 takePhoto, alert, multidex, qiniuyun,bottom_navigation_bar]
 
     // APT合集
     annotationProcessorLibs = [glideCompiler, dagger2Compiler]

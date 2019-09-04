@@ -53,5 +53,4 @@ dependencies {
     implementation project(':Provider')
     api rootProject.ext.dagger2
     kapt rootProject.ext.dagger2Compiler
-
 }

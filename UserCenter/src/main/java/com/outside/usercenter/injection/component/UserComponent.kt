@@ -2,6 +2,7 @@ package com.outside.usercenter.injection.component
 
 import com.outside.baselibrary.injection.PerComponentScope
 import com.outside.baselibrary.injection.component.ActivityComponent
+import com.outside.usercenter.injection.module.UploadModule
 import com.outside.usercenter.injection.module.UserModule
 import com.outside.usercenter.ui.activity.*
 import dagger.Component
@@ -13,7 +14,8 @@ import dagger.Component
  * creatTime:    2019/9/2 18:29
  */
 @PerComponentScope
-@Component(dependencies = arrayOf(ActivityComponent::class),modules = arrayOf(UserModule::class))
+@Component(dependencies = arrayOf(ActivityComponent::class),
+    modules = arrayOf(UserModule::class,UploadModule::class))
 interface UserComponent {
     fun inject(activity:RegisterActivity)
     fun inject(activity:LoginActivity)

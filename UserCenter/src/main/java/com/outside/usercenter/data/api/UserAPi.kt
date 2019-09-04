@@ -1,5 +1,6 @@
 package com.outside.usercenter.data.api
 
+import com.kotlin.user.data.protocol.EditUserReq
 import com.outside.baselibrary.data.protocol.BaseResp
 import com.outside.usercenter.data.protocol.*
 import io.reactivex.Observable
@@ -26,4 +27,7 @@ interface UserAPi {
 
     @POST("userCenter/resetPwd")
     fun resetPwd(@Body req: ResetPwdReq):Observable<BaseResp<Boolean>>
+
+    @POST("userCenter/editUser")
+    fun updateUser(@Body req: EditUserReq):Observable<BaseResp<UserInfo>>
 }

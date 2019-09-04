@@ -1,5 +1,7 @@
 package com.outside.usercenter.data.repository
 
+import android.text.style.UpdateAppearance
+import com.kotlin.user.data.protocol.EditUserReq
 import com.outside.baselibrary.data.net.RetrofitFactory
 import com.outside.baselibrary.data.protocol.BaseResp
 import com.outside.usercenter.data.api.UserAPi
@@ -23,22 +25,24 @@ class UserRepository @Inject constructor() {
     }
 
 
-    //登录访问网络请求 返回Observable对象
     fun login(phone: String, pwd: String, pushId: String): Observable<BaseResp<UserInfo>> {
         return RetrofitFactory.instance.create(UserAPi::class.java)
             .login(LoginReq(phone, pwd, pushId))
     }
 
-    //忘记密码访问网络请求 返回Observable对象
     fun forgetPwd(phone: String, code: String): Observable<BaseResp<Boolean>> {
         return RetrofitFactory.instance.create(UserAPi::class.java)
             .forgetPwd(ForgetPwdReq(phone, code))
     }
 
 
-    //登录访问网络请求 返回Observable对象
     fun resetPwd(phone: String, pwd: String): Observable<BaseResp<Boolean>> {
         return RetrofitFactory.instance.create(UserAPi::class.java)
             .resetPwd(ResetPwdReq(phone, pwd))
+    }
+
+    fun updateUser(userIcon: String,userName: String,userGender:String, userSign: String ): Observable<BaseResp<UserInfo>> {
+        return RetrofitFactory.instance.create(UserAPi::class.java)
+            .updateUser(EditUserReq(userIcon,userName,userGender,userSign))
     }
 }

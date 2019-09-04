@@ -1,6 +1,7 @@
 package com.outside.baselibrary.ui.activity
 
 import android.os.Bundle
+import androidx.multidex.MultiDexApplication
 import com.kotlin.base.widgets.ProgressLoading
 import com.outside.baselibrary.common.BaseApplication
 import com.outside.baselibrary.injection.component.ActivityComponent
@@ -46,15 +47,19 @@ abstract class BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), BaseView 
         injectComponent()
         mLoadingDialog = ProgressLoading.create(this)
         initView()
+        initData()
     }
 
     abstract fun getLayoutId(): Int
     abstract fun injectComponent()
     abstract fun initView()
+    open fun initData(){}
 
     private fun initActivityInjection() {
+
+        println(this.applicationContext.toString())
         activityComponent = DaggerActivityComponent.builder()
-            .appComponent((application as BaseApplication).appComponent)
+            .appComponent((this.applicationContext as BaseApplication).appComponent)
             .activityModule(ActivityModule(this))
             .lifeCycleProviderModule(LifeCycleProviderModule(this))//生命周期
             .build()

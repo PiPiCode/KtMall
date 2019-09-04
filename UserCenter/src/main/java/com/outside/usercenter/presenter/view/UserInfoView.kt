@@ -1,6 +1,7 @@
 package com.outside.usercenter.presenter.view
 
 import com.outside.baselibrary.presenter.view.BaseView
+import com.outside.usercenter.data.protocol.UserInfo
 
 /**
  * className:    RegisterView
@@ -10,5 +11,8 @@ import com.outside.baselibrary.presenter.view.BaseView
  */
 
 interface UserInfoView : BaseView {
+
+    fun onGetUploadTokenResult(result:String)
+    fun onUpdateResult(result:UserInfo)
 
 }

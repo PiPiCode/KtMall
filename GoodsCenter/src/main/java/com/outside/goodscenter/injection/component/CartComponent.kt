@@ -2,6 +2,7 @@ package com.outside.usercenter.injection.component
 
 import com.outside.baselibrary.injection.PerComponentScope
 import com.outside.baselibrary.injection.component.ActivityComponent
+import com.outside.goodscenter.ui.fragment.CartFragment
 import com.outside.usercenter.injection.module.CartModule
 import dagger.Component
 
@@ -16,5 +17,6 @@ import dagger.Component
     modules = arrayOf(CartModule::class))
 interface CartComponent {
 
+    fun inject(cartFragment: CartFragment)
 
 }

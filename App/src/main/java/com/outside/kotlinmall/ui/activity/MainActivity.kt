@@ -3,7 +3,13 @@ package com.outside.kotlinmall.ui.activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
+import com.kotlin.base.utils.AppPrefsUtils
+import com.kotlin.goods.common.GoodsConstant
+import com.kotlin.goods.event.UpdateCartSizeEvent
+import com.outside.baselibrary.rx.RxBus
+import com.outside.baselibrary.rx.registerInBus
 import com.outside.baselibrary.ui.activity.BaseActivity
+import com.outside.goodscenter.ui.fragment.CartFragment
 import com.outside.goodscenter.ui.fragment.CategoryFragment
 import com.outside.kotlinmall.R
 import com.outside.kotlinmall.ui.fragment.HomeFragment
@@ -16,7 +22,7 @@ class MainActivity : BaseActivity() {
     private val mStack = Stack<Fragment>()
     private val mHomeFragment by lazy { HomeFragment() }
     private val mCategoryFragment by lazy { CategoryFragment() }
-    private val mCartFragment by lazy { HomeFragment() }
+    private val mCartFragment by lazy { CartFragment() }
     private val mMsgFragment by lazy { HomeFragment() }
     private val mMeFrament by lazy { MineFragment() }
 
@@ -24,8 +30,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mBottomNavBar.checkCartBadge(20)
-        mBottomNavBar.checkMsgBadge(false)
         //定时器
 //        Observable.timer(2,TimeUnit.SECONDS)
 //            .observeOn(AndroidSchedulers.mainThread())
@@ -37,6 +41,8 @@ class MainActivity : BaseActivity() {
         initView()
         initFragment()
         initBottomNaviBar()
+        initObserve()
+        loadCartSize()
     }
 
     private fun initFragment() {
@@ -51,7 +57,6 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initView() {
-
 
     }
 
@@ -75,5 +80,27 @@ class MainActivity : BaseActivity() {
         val manager = supportFragmentManager.beginTransaction()
         manager.replace(R.id.mContainer,mStack[position])
         manager.commit()
+    }
+
+    /*
+    监听购物车数量变化
+ */
+    private fun initObserve(){
+        RxBus.observe<UpdateCartSizeEvent>()
+            .subscribe {
+                loadCartSize()
+            }.registerInBus(this)
+    }
+
+
+    private fun loadCartSize(){
+
+        mBottomNavBar.checkCartBadge(AppPrefsUtils.getInt(GoodsConstant.SP_CART_SIZE))
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        RxBus.unRegister(this)
     }
 }

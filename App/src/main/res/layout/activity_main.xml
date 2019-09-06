@@ -4,9 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="bottom"
     android:orientation="vertical"
     tools:context=".ui.activity.MainActivity">
+    <FrameLayout
+        android:id="@+id/mContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
     <com.outside.baselibrary.widgets.BottomNavBar
         android:id="@+id/mBottomNavBar"
         style="@style/MatchWrap"

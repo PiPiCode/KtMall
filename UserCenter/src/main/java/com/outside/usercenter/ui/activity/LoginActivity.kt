@@ -1,11 +1,13 @@
 package com.outside.usercenter.ui.activity
 
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.kotlin.base.ext.enable
 import com.kotlin.base.ext.onClick
 import com.kotlin.user.utils.UserPrefsUtils
 import com.outside.baselibrary.common.AppManager
 import com.outside.baselibrary.ui.activity.BaseMvpActivity
+import com.outside.provider.router.RouterPath
 import com.outside.usercenter.R
 import com.outside.usercenter.data.protocol.UserInfo
 import com.outside.usercenter.injection.component.DaggerUserComponent
@@ -16,6 +18,13 @@ import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
+/**
+ * className:    LoginActivity
+ * description:  描述
+ * author:       CLW2018
+ * creatTime:    2019/9/2 17:00
+ */
+@Route(path = RouterPath.UserCenter.PATH_LOGIN)
 class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClickListener {
 
     private var pressTime: Long = 0L
@@ -48,6 +57,7 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
         toast("登录成功")
         UserPrefsUtils.putUserInfo(userInfo)
         startActivity<UserInfoActivity>()
+        finish()
 
     }
 

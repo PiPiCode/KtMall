@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.kotlin.mall.ui.activity.SettingActivity"/>
+
         <meta-data
             android:name="android.max_aspect"
             android:value="2.4" />

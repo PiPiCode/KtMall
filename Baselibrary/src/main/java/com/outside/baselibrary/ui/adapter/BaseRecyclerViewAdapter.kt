@@ -21,6 +21,14 @@ abstract class BaseRecyclerViewAdapter<T, VH : RecyclerView.ViewHolder>(var mCon
         notifyDataSetChanged()
     }
 
+    /*
+        添加数据
+
+     */
+    fun addData(sources: MutableList<T>) {
+        dataList.addAll(sources)
+        notifyDataSetChanged()
+    }
 
     //ItemClick事件
     var mItemClickListener :((t:T,position:Int) -> Unit)? = null

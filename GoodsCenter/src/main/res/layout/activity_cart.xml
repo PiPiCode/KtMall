@@ -4,9 +4,9 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-<!--    <fragment-->
-<!--            android:id="@+id/fragment_cart"-->
-<!--            android:layout_width="match_parent"-->
-<!--              android:layout_height="match_parent"-->
-<!--              class="com.kotlin.goods.ui.fragment.CartFragment"/>-->
+    <fragment
+            android:id="@+id/fragment_cart"
+            android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              class="com.outside.goodscenter.ui.fragment.CartFragment"/>
 </LinearLayout>

@@ -42,6 +42,7 @@ dependencies {
     implementation project(path: ':Provider')
     implementation project(path: ':MessageCenter')
     implementation project(path: ':GoodsCenter')
+    implementation project(path: ':OrderCenter')
     if(isUserModule.toBoolean()){
         implementation project(path: ':UserCenter')
     }

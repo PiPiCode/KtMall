@@ -14,4 +14,7 @@ import com.outside.baselibrary.presenter.view.BaseView
 interface CartView : BaseView {
 
     fun getCartList(result: MutableList<CartGoods>?)
+
+    fun onDeleteCartList(b:Boolean)
+    fun onSubmitCartListResult(t: Int)
 }

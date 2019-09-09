@@ -16,6 +16,7 @@ import com.outside.baselibrary.ui.activity.BaseActivity
 import com.outside.goodscenter.R
 import com.outside.provider.common.afterLogin
 import kotlinx.android.synthetic.main.activity_goods_detail.*
+import org.jetbrains.anko.startActivity
 import q.rorbin.badgeview.QBadgeView
 
 
@@ -55,7 +56,7 @@ class GoodsDetailActivity : BaseActivity() {
         }
 
         mEnterCartTv.onClick {
-//            startActivity<CartActivity>()
+            startActivity<CartActivity>()
         }
 
         mLeftIv.onClick {

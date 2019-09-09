@@ -11,11 +11,16 @@ import com.kotlin.base.widgets.BannerImageLoader
 import com.kotlin.mall.common.*
 import com.kotlin.mall.ui.activity.SettingActivity
 import com.kotlin.mall.ui.adapter.TopicAdapter
+import com.kotlin.order.common.OrderConstant
+import com.kotlin.order.common.OrderStatus
+import com.kotlin.order.ui.activity.OrderActivity
 import com.kotlin.provider.common.ProviderConstant
 import com.outside.baselibrary.common.BaseConstant
 import com.outside.baselibrary.ui.fragment.BaseFragment
 import com.outside.kotlinmall.R
 import com.outside.kotlinmall.ui.adapter.HomeDiscountAdapter
+import com.outside.ordercenter.ui.activity.ShipAddressActivity
+import com.outside.provider.common.afterLogin
 import com.outside.provider.common.isLogined
 import com.outside.usercenter.data.protocol.UserInfo
 import com.outside.usercenter.ui.activity.LoginActivity
@@ -35,7 +40,7 @@ import org.jetbrains.anko.support.v4.startActivity
  * creatTime:    2019/9/5 16:46
  */
 
-class MineFragment : BaseFragment() , View.OnClickListener{
+class MineFragment : BaseFragment(), View.OnClickListener {
 
 
     override fun getLayoutId(): Int {
@@ -45,6 +50,13 @@ class MineFragment : BaseFragment() , View.OnClickListener{
     override fun initView() {
         mUserIconIv.onClick(this)
         mUserNameTv.onClick(this)
+
+        mAddressTv.onClick(this)
+        mSettingTv.onClick(this)
+        mAllOrderTv.onClick(this)
+        mWaitPayOrderTv.onClick(this)
+        mWaitConfirmOrderTv.onClick(this)
+        mCompleteOrderTv.onClick(this)
     }
 
     override fun onResume() {
@@ -54,13 +66,13 @@ class MineFragment : BaseFragment() , View.OnClickListener{
 
     private fun loadData() {
 
-        if(!isLogined()){
+        if (!isLogined()) {
             mUserIconIv.setImageResource(R.drawable.icon_default_user)
             mUserNameTv.text = getString(R.string.un_login_text)
 
-        }else{
+        } else {
             val urlIcon = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_ICON)!!
-            if (urlIcon.isNotEmpty()){
+            if (urlIcon.isNotEmpty()) {
                 mUserIconIv.loadUrl(urlIcon)
             }
             mUserNameTv.text = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_NAME)
@@ -71,22 +83,46 @@ class MineFragment : BaseFragment() , View.OnClickListener{
 
 
     override fun onClick(p0: View) {
-        when(p0.id){
-            R.id.mUserIconIv,R.id.mUserNameTv->{
-                if (isLogined()){
+        when (p0.id) {
+            R.id.mUserIconIv, R.id.mUserNameTv -> {
+                if (isLogined()) {
                     startActivity<UserInfoActivity>()
-                }else{
+                } else {
                     startActivity<LoginActivity>()
                 }
             }
-            R.id.mSettingTv->{
+
+            R.id.mAddressTv -> {
+                startActivity<ShipAddressActivity>()
+            }
+
+            R.id.mAllOrderTv -> {
+                afterLogin {
+                    startActivity<OrderActivity>()
+                }
+            }
+
+            R.id.mWaitPayOrderTv -> {
+                afterLogin {
+                    startActivity<OrderActivity>(OrderConstant.KEY_ORDER_STATUS to OrderStatus.ORDER_WAIT_PAY)
+                }
+            }
+            R.id.mWaitConfirmOrderTv -> {
+                afterLogin {
+                    startActivity<OrderActivity>(OrderConstant.KEY_ORDER_STATUS to OrderStatus.ORDER_WAIT_CONFIRM)
+                }
+            }
+
+            R.id.mCompleteOrderTv -> {
+                afterLogin {
+                    startActivity<OrderActivity>(OrderConstant.KEY_ORDER_STATUS to OrderStatus.ORDER_COMPLETED)
+                }
+            }
+
+            R.id.mSettingTv -> {
                 startActivity<SettingActivity>()
             }
         }
-
     }
-
-
-
 
 }

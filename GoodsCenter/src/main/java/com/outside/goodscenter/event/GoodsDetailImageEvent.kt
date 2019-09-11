@@ -1,4 +1,4 @@
-package com.kotlin.goods.event
+package com.outside.goodscenter.event
 
 /*
     商品详情Tab two 事件

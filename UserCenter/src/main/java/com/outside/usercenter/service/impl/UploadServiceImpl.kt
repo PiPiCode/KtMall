@@ -1,7 +1,7 @@
 package com.outside.usercenter.service.impl
 
 
-import com.kotlin.base.ext.convert
+import com.outside.baselibrary.ext.convert
 import com.outside.usercenter.data.repository.UploadRepository
 import com.outside.usercenter.service.UploadService
 import io.reactivex.Observable

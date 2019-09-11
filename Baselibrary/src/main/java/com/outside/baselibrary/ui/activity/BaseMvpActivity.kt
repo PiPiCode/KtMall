@@ -1,8 +1,6 @@
 package com.outside.baselibrary.ui.activity
 
 import android.os.Bundle
-import androidx.multidex.MultiDexApplication
-import com.kotlin.base.widgets.ProgressLoading
 import com.outside.baselibrary.common.BaseApplication
 import com.outside.baselibrary.injection.component.ActivityComponent
 import com.outside.baselibrary.injection.component.DaggerActivityComponent
@@ -10,6 +8,7 @@ import com.outside.baselibrary.injection.module.ActivityModule
 import com.outside.baselibrary.injection.module.LifeCycleProviderModule
 import com.outside.baselibrary.presenter.BasePresenter
 import com.outside.baselibrary.presenter.view.BaseView
+import com.outside.baselibrary.widgets.ProgressLoading
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 

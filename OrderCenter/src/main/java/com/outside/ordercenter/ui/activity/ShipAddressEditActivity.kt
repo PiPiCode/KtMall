@@ -1,15 +1,14 @@
 package com.outside.ordercenter.ui.activity
 
-import com.kotlin.base.ext.onClick
-import com.kotlin.order.common.OrderConstant
-import com.kotlin.order.data.protocol.ShipAddress
-import com.outside.baselibrary.ui.activity.BaseActivity
+import com.outside.baselibrary.ext.onClick
 import com.outside.baselibrary.ui.activity.BaseMvpActivity
 import com.outside.ordercenter.R
+import com.outside.ordercenter.common.OrderConstant
+import com.outside.ordercenter.data.protocol.ShipAddress
+import com.outside.ordercenter.injection.component.DaggerShipAddressComponent
+import com.outside.ordercenter.injection.module.ShipAddressModule
 import com.outside.ordercenter.presenter.EditShipAddressPresenter
 import com.outside.ordercenter.presenter.view.EditShipAddressView
-import com.outside.usercenter.injection.component.DaggerShipAddressComponent
-import com.outside.usercenter.injection.module.ShipAddressModule
 import kotlinx.android.synthetic.main.activity_edit_address.*
 import org.jetbrains.anko.toast
 
@@ -23,7 +22,7 @@ import org.jetbrains.anko.toast
 class ShipAddressEditActivity:BaseMvpActivity<EditShipAddressPresenter>(),EditShipAddressView {
 
 
-    private var mAddress:ShipAddress? =  null
+    private var mAddress: ShipAddress? =  null
     override fun getLayoutId(): Int {
         return R.layout.activity_edit_address
 
@@ -31,7 +30,8 @@ class ShipAddressEditActivity:BaseMvpActivity<EditShipAddressPresenter>(),EditSh
 
     override fun injectComponent() {
         DaggerShipAddressComponent.builder().activityComponent(activityComponent).shipAddressModule(
-            ShipAddressModule()).build().inject(this)
+            ShipAddressModule()
+        ).build().inject(this)
         mPresenter.mView = this
 
     }

@@ -1,20 +1,21 @@
-package com.kotlin.goods.ui.adapter
+package com.outside.goodscenter.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kotlin.base.ext.loadUrl
-import com.kotlin.base.ext.onClick
-import com.kotlin.base.ui.adapter.BaseRecyclerViewAdapter
-import com.kotlin.base.utils.YuanFenConverter
-import com.kotlin.base.widgets.DefaultTextWatcher
-import com.kotlin.goods.data.protocol.CartGoods
-import com.kotlin.goods.event.CartAllCheckedEvent
-import com.kotlin.goods.event.UpdateTotalPriceEvent
+import com.outside.baselibrary.ext.loadUrl
+import com.outside.baselibrary.ext.onClick
+
 import com.outside.baselibrary.rx.RxBus
+import com.outside.baselibrary.ui.adapter.BaseRecyclerViewAdapter
+import com.outside.baselibrary.utils.YuanFenConverter
+import com.outside.baselibrary.widgets.DefaultTextWatcher
 import com.outside.goodscenter.R
+import com.outside.goodscenter.data.protocol.CartGoods
+import com.outside.goodscenter.event.CartAllCheckedEvent
+import com.outside.goodscenter.event.UpdateTotalPriceEvent
 import kotlinx.android.synthetic.main.layout_cart_goods_item.view.*
 
 /*
@@ -56,7 +57,7 @@ class CartGoodsAdapter(context: Context) : BaseRecyclerViewAdapter<CartGoods, Ca
         }
 
         //商品数量变化监听
-        holder.itemView.mGoodsCountBtn.mCount.addTextChangedListener(object:DefaultTextWatcher(){
+        holder.itemView.mGoodsCountBtn.mCount.addTextChangedListener(object: DefaultTextWatcher(){
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 model.goodsCount = s.toString().toInt()
                 RxBus.send(UpdateTotalPriceEvent())

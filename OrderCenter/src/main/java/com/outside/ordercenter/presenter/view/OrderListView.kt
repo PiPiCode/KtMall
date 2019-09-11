@@ -1,7 +1,7 @@
 package com.outside.ordercenter.presenter.view
 
-import com.kotlin.order.data.protocol.Order
 import com.outside.baselibrary.presenter.view.BaseView
+import com.outside.ordercenter.data.protocol.Order
 
 /**
  * className:    OrderConfirmView

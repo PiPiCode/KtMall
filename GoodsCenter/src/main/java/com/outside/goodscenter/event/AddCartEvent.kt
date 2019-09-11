@@ -1,4 +1,4 @@
-package com.kotlin.goods.event
+package com.outside.goodscenter.event
 
 /*
     加入购物车事件

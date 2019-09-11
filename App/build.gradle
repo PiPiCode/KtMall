@@ -17,9 +17,15 @@ android {
         versionName rootProject.ext.android.versionName
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId
+        ]
+
     }
 
-    kotlinOptions{
+    kotlinOptions {
         jvmTarget = "1.8"
     }
 
@@ -43,7 +49,8 @@ dependencies {
     implementation project(path: ':MessageCenter')
     implementation project(path: ':GoodsCenter')
     implementation project(path: ':OrderCenter')
-    if(isUserModule.toBoolean()){
+    implementation project(path: ':PaySdk')
+    if (isUserModule.toBoolean()) {
         implementation project(path: ':UserCenter')
     }
 }

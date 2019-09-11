@@ -1,4 +1,4 @@
-package com.kotlin.base.widgets
+package  com.outside.baselibrary.widgets
 
 import android.content.Context
 import android.util.AttributeSet

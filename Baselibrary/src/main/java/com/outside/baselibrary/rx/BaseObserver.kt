@@ -3,10 +3,6 @@ package com.outside.baselibrary.rx
 import com.outside.baselibrary.presenter.view.BaseView
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
-import retrofit2.adapter.rxjava2.Result.response
-import okhttp3.ResponseBody
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import android.util.Log
 import com.outside.baselibrary.common.BaseConstant
 
 

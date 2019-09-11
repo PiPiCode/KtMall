@@ -1,8 +1,8 @@
 package com.outside.provider.common
 
 import com.alibaba.android.arouter.launcher.ARouter
-import com.kotlin.base.utils.AppPrefsUtils
 import com.outside.baselibrary.common.BaseConstant
+import com.outside.baselibrary.utils.AppPrefsUtils
 import com.outside.provider.router.RouterPath
 
 /**

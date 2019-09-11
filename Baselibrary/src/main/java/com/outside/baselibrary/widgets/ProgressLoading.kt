@@ -1,9 +1,8 @@
-package com.kotlin.base.widgets
+package  com.outside.baselibrary.widgets
 
 import android.app.Dialog
 import android.content.Context
 import android.graphics.drawable.AnimationDrawable
-import android.graphics.drawable.Drawable
 import android.view.Gravity
 import android.widget.ImageView
 import com.outside.baselibrary.R

@@ -1,4 +1,4 @@
-package com.kotlin.mall.common
+package com.outside.kotlinmall.common
 
 
 /*

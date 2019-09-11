@@ -1,4 +1,4 @@
-package com.outside.usercenter.injection.module
+package com.outside.goodscenter.injection.module
 
 import com.outside.goodscenter.service.GoodsService
 import com.outside.goodscenter.service.impl.GoodsServiceImpl

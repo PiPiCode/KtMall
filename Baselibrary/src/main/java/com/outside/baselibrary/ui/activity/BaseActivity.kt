@@ -3,7 +3,6 @@ package com.outside.baselibrary.ui.activity
 import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
 import com.gyf.immersionbar.ktx.immersionBar
 import com.outside.baselibrary.R
 import com.outside.baselibrary.common.AppManager

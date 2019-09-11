@@ -1,12 +1,13 @@
 package com.outside.usercenter.ui.activity
 
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.kotlin.base.ext.enable
-import com.kotlin.base.ext.onClick
-import com.kotlin.user.utils.UserPrefsUtils
 import com.outside.baselibrary.common.AppManager
+import com.outside.baselibrary.ext.enable
+import com.outside.baselibrary.ext.onClick
 import com.outside.baselibrary.ui.activity.BaseMvpActivity
+import com.outside.provider.PushProvider
 import com.outside.provider.router.RouterPath
 import com.outside.usercenter.R
 import com.outside.usercenter.data.protocol.UserInfo
@@ -14,6 +15,7 @@ import com.outside.usercenter.injection.component.DaggerUserComponent
 import com.outside.usercenter.injection.module.UserModule
 import com.outside.usercenter.presenter.LoginPresenter
 import com.outside.usercenter.presenter.view.LoginView
+import com.outside.usercenter.utils.UserPrefsUtils
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -27,6 +29,10 @@ import org.jetbrains.anko.toast
 @Route(path = RouterPath.UserCenter.PATH_LOGIN)
 class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClickListener {
 
+    @Autowired(name = RouterPath.MessageCenter.PATH_MESSAGE_PUSH)
+    @JvmField
+    var mPushProvider: PushProvider? = null
+
     private var pressTime: Long = 0L
 
     override fun getLayoutId(): Int {
@@ -38,8 +44,8 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
      */
     override fun initView() {
 
-        mLoginBtn.enable(mMobileEt) {isBtnEnable()}
-        mLoginBtn.enable(mPwdEt) {isBtnEnable()}
+        mLoginBtn.enable(mMobileEt) { isBtnEnable() }
+        mLoginBtn.enable(mPwdEt) { isBtnEnable() }
 
         mLoginBtn.onClick(this)
         mForgetPwdTv.onClick(this)
@@ -66,7 +72,7 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
             when (it.id) {
                 R.id.mLoginBtn -> {
 
-                    mPresenter.login(mMobileEt.text.toString(),mPwdEt.text.toString(),"")
+                    mPresenter.login(mMobileEt.text.toString(), mPwdEt.text.toString(), mPushProvider?.getPushId()?:"")
 
                 }
 
@@ -79,7 +85,7 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
                     startActivity<RegisterActivity>()
                 }
 
-                else ->{
+                else -> {
 
                 }
             }

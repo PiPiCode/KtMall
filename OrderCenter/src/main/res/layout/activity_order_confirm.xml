@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 style="@style/MatchMatch.Common">
-    <com.kotlin.base.widgets.HeaderBar
+    <com.outside.baselibrary.widgets.HeaderBar
             android:id="@+id/mHeaderBar"
             style="@style/MatchWrap"
             app:titleText="订单确认"/>

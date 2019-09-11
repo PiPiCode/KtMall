@@ -1,10 +1,11 @@
-package com.outside.usercenter.injection.component
+package com.outside.ordercenter.injection.component
 
-import com.kotlin.order.ui.fragment.OrderFragment
 import com.outside.baselibrary.injection.PerComponentScope
 import com.outside.baselibrary.injection.component.ActivityComponent
+import com.outside.ordercenter.injection.module.OrderModule
 import com.outside.ordercenter.ui.activity.OrderConfirmActivity
-import com.outside.usercenter.injection.module.OrderModule
+import com.outside.ordercenter.ui.activity.OrderDetailActivity
+import com.outside.ordercenter.ui.fragment.OrderFragment
 import dagger.Component
 
 /**
@@ -18,7 +19,8 @@ import dagger.Component
     modules = arrayOf(OrderModule::class))
 interface OrderComponent {
     fun inject(activity: OrderConfirmActivity)
+    fun inject(activity: OrderDetailActivity)
 
-    fun inject(fragment:OrderFragment)
+    fun inject(fragment: OrderFragment)
 
 }

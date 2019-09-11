@@ -1,6 +1,5 @@
 package com.outside.usercenter.data.api
 
-import com.kotlin.user.data.protocol.EditUserReq
 import com.outside.baselibrary.data.protocol.BaseResp
 import com.outside.usercenter.data.protocol.*
 import io.reactivex.Observable

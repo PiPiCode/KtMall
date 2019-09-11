@@ -1,14 +1,14 @@
-package com.kotlin.order.ui.adapter
+package com.outside.ordercenter.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kotlin.base.ext.onClick
-import com.kotlin.base.ui.adapter.BaseRecyclerViewAdapter
-import com.kotlin.order.data.protocol.ShipAddress
+import com.outside.baselibrary.ext.onClick
+import com.outside.baselibrary.ui.adapter.BaseRecyclerViewAdapter
 import com.outside.ordercenter.R
+import com.outside.ordercenter.data.protocol.ShipAddress
 import kotlinx.android.synthetic.main.layout_address_item.view.*
 
 /*

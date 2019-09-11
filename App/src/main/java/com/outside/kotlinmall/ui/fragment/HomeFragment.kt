@@ -1,15 +1,13 @@
 package com.outside.kotlinmall.ui.fragment
 
 
-import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kotlin.base.widgets.BannerImageLoader
-import com.kotlin.mall.common.*
-import com.kotlin.mall.ui.adapter.TopicAdapter
 import com.outside.baselibrary.ui.fragment.BaseFragment
+import com.outside.baselibrary.utils.BannerImageLoader
 import com.outside.kotlinmall.R
+import com.outside.kotlinmall.common.*
 import com.outside.kotlinmall.ui.adapter.HomeDiscountAdapter
-import com.youth.banner.Banner
+import com.outside.kotlinmall.ui.adapter.TopicAdapter
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*

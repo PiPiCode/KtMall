@@ -1,13 +1,11 @@
-package com.kotlin.order.data.repository
+package com.outside.ordercenter.data.repository
 
-import com.kotlin.order.data.api.ShipAddressApi
 import javax.inject.Inject
-import com.kotlin.order.data.protocol.ShipAddress
-import com.kotlin.order.data.protocol.EditShipAddressReq
-import com.kotlin.order.data.protocol.DeleteShipAddressReq
-import com.kotlin.order.data.protocol.AddShipAddressReq
+
 import com.outside.baselibrary.data.net.RetrofitFactory
 import com.outside.baselibrary.data.protocol.BaseResp
+import com.outside.ordercenter.data.api.*
+import com.outside.ordercenter.data.protocol.*
 import io.reactivex.Observable
 
 
@@ -20,7 +18,9 @@ class ShipAddressRepository @Inject constructor() {
         添加收货地址
      */
     fun addShipAddress(shipUserName: String, shipUserMobile: String, shipAddress: String): Observable<BaseResp<String>> {
-        return RetrofitFactory.instance.create(ShipAddressApi::class.java).addShipAddress(AddShipAddressReq(shipUserName,shipUserMobile,shipAddress))
+        return RetrofitFactory.instance.create(ShipAddressApi::class.java).addShipAddress(
+            AddShipAddressReq(shipUserName,shipUserMobile,shipAddress)
+        )
     }
 
     /*

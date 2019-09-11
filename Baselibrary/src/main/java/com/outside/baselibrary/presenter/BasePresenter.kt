@@ -1,8 +1,8 @@
 package com.outside.baselibrary.presenter
 
 import android.content.Context
-import com.kotlin.base.utils.NetWorkUtils
 import com.outside.baselibrary.presenter.view.BaseView
+import com.outside.baselibrary.utils.NetWorkUtils
 import com.trello.rxlifecycle3.LifecycleProvider
 import javax.inject.Inject
 

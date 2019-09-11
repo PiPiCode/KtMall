@@ -1,8 +1,8 @@
-package com.kotlin.goods.data.api
+package com.outside.goodscenter.data.api
 
-import com.kotlin.goods.data.protocol.Category
-import com.kotlin.goods.data.protocol.GetCategoryReq
 import com.outside.baselibrary.data.protocol.BaseResp
+import com.outside.goodscenter.data.protocol.Category
+import com.outside.goodscenter.data.protocol.GetCategoryReq
 import io.reactivex.Observable
 import retrofit2.http.Body
 import retrofit2.http.POST

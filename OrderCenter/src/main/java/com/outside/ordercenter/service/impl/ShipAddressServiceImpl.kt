@@ -1,11 +1,10 @@
-package com.kotlin.goods.service.impl
+package com.outside.ordercenter.service.impl
 
-import com.kotlin.base.ext.convert
-import com.kotlin.base.ext.convertBoolean
-import com.kotlin.goods.data.repository.OrderRepository
-import com.kotlin.order.data.protocol.*
-import com.kotlin.order.data.repository.ShipAddressRepository
-import com.outside.ordercenter.service.OrderService
+import com.outside.baselibrary.ext.convert
+import com.outside.baselibrary.ext.convertBoolean
+import com.outside.ordercenter.data.protocol.DeleteShipAddressReq
+import com.outside.ordercenter.data.protocol.ShipAddress
+import com.outside.ordercenter.data.repository.ShipAddressRepository
 import com.outside.ordercenter.service.ShipAddressService
 import io.reactivex.Observable
 import javax.inject.Inject

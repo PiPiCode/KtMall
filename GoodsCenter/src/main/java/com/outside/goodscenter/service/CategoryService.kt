@@ -1,6 +1,6 @@
 package com.outside.goodscenter.service
 
-import com.kotlin.goods.data.protocol.Category
+import com.outside.goodscenter.data.protocol.Category
 import io.reactivex.Observable
 
 /**

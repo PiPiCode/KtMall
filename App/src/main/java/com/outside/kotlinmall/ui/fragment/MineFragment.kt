@@ -1,36 +1,24 @@
 package com.outside.kotlinmall.ui.fragment
 
 
-import android.content.Context
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.kotlin.base.ext.loadUrl
-import com.kotlin.base.ext.onClick
-import com.kotlin.base.utils.AppPrefsUtils
-import com.kotlin.base.widgets.BannerImageLoader
-import com.kotlin.mall.common.*
-import com.kotlin.mall.ui.activity.SettingActivity
-import com.kotlin.mall.ui.adapter.TopicAdapter
-import com.kotlin.order.common.OrderConstant
-import com.kotlin.order.common.OrderStatus
-import com.kotlin.order.ui.activity.OrderActivity
-import com.kotlin.provider.common.ProviderConstant
-import com.outside.baselibrary.common.BaseConstant
+
+import com.outside.baselibrary.ext.loadUrl
+import com.outside.baselibrary.ext.onClick
 import com.outside.baselibrary.ui.fragment.BaseFragment
+import com.outside.baselibrary.utils.AppPrefsUtils
 import com.outside.kotlinmall.R
-import com.outside.kotlinmall.ui.adapter.HomeDiscountAdapter
+import com.outside.kotlinmall.ui.activity.SettingActivity
+import com.outside.ordercenter.common.OrderConstant
+import com.outside.ordercenter.common.OrderStatus
+import com.outside.ordercenter.ui.activity.OrderActivity
 import com.outside.ordercenter.ui.activity.ShipAddressActivity
+import com.outside.provider.common.ProviderConstant
 import com.outside.provider.common.afterLogin
 import com.outside.provider.common.isLogined
-import com.outside.usercenter.data.protocol.UserInfo
 import com.outside.usercenter.ui.activity.LoginActivity
 import com.outside.usercenter.ui.activity.UserInfoActivity
-import com.youth.banner.Banner
-import com.youth.banner.BannerConfig
-import com.youth.banner.Transformer
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_me.*
-import me.crosswall.lib.coverflow.CoverFlow
 import org.jetbrains.anko.support.v4.startActivity
 
 /**
@@ -85,15 +73,15 @@ class MineFragment : BaseFragment(), View.OnClickListener {
     override fun onClick(p0: View) {
         when (p0.id) {
             R.id.mUserIconIv, R.id.mUserNameTv -> {
-                if (isLogined()) {
+                afterLogin {
                     startActivity<UserInfoActivity>()
-                } else {
-                    startActivity<LoginActivity>()
                 }
             }
 
             R.id.mAddressTv -> {
-                startActivity<ShipAddressActivity>()
+                afterLogin {
+                    startActivity<ShipAddressActivity>()
+                }
             }
 
             R.id.mAllOrderTv -> {

@@ -1,10 +1,10 @@
-package com.kotlin.goods.service.impl
+package com.outside.ordercenter.service.impl
 
-import com.kotlin.base.ext.convert
-import com.kotlin.base.ext.convertBoolean
-import com.kotlin.goods.data.repository.OrderRepository
-import com.kotlin.order.data.protocol.GetOrderByIdReq
-import com.kotlin.order.data.protocol.Order
+import com.outside.baselibrary.ext.convert
+import com.outside.baselibrary.ext.convertBoolean
+import com.outside.ordercenter.data.protocol.GetOrderByIdReq
+import com.outside.ordercenter.data.protocol.Order
+import com.outside.ordercenter.data.repository.OrderRepository
 import com.outside.ordercenter.service.OrderService
 import io.reactivex.Observable
 import javax.inject.Inject

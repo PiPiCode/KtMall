@@ -1,7 +1,7 @@
 package com.outside.ordercenter.presenter.view
 
-import com.kotlin.order.data.protocol.ShipAddress
 import com.outside.baselibrary.presenter.view.BaseView
+import com.outside.ordercenter.data.protocol.ShipAddress
 
 /**
  * className:    ShipAddressView

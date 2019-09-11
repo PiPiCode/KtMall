@@ -1,20 +1,23 @@
-package com.kotlin.order.ui.fragment
+package com.outside.ordercenter.ui.fragment
 
 
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.bigkoo.alertview.AlertView
 import com.bigkoo.alertview.OnItemClickListener
 import com.kennyc.view.MultiStateView
-import com.kotlin.base.ext.startLoading
-import com.kotlin.order.common.OrderConstant
-import com.kotlin.order.data.protocol.Order
-import com.kotlin.order.ui.adapter.OrderAdapter
+import com.outside.baselibrary.ext.startLoading
 import com.outside.baselibrary.ui.fragment.BaseMvpFragment
 import com.outside.ordercenter.R
+import com.outside.ordercenter.common.OrderConstant
+import com.outside.ordercenter.data.protocol.Order
+import com.outside.ordercenter.injection.component.DaggerOrderComponent
+import com.outside.ordercenter.injection.module.OrderModule
 import com.outside.ordercenter.presenter.OrderListPresenter
 import com.outside.ordercenter.presenter.view.OrderListView
-import com.outside.usercenter.injection.component.DaggerOrderComponent
-import com.outside.usercenter.injection.module.OrderModule
+import com.outside.ordercenter.ui.adapter.OrderAdapter
+import com.outside.provider.common.ProviderConstant
+import com.outside.provider.router.RouterPath
 import kotlinx.android.synthetic.main.fragment_order.*
 import org.jetbrains.anko.support.v4.toast
 
@@ -46,6 +49,10 @@ class OrderFragment : BaseMvpFragment<OrderListPresenter>(), OrderListView {
             override fun onOptClick(optType: Int, order: Order) {
                 when (optType) {
                     OrderConstant.OPT_ORDER_PAY -> {
+                        ARouter.getInstance().build(RouterPath.PaySDK.PATH_SDK)
+                            .withInt(ProviderConstant.KEY_ORDER_ID,order.id)
+                            .withLong(ProviderConstant.KEY_ORDER_PRICE,order.totalPrice)
+                            .navigation()
 
                     }
                     OrderConstant.OPT_ORDER_CANCEL -> {

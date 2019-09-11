@@ -1,10 +1,9 @@
 package com.outside.ordercenter.presenter
 
-import com.kotlin.base.ext.excute
-import com.kotlin.order.data.protocol.EditShipAddressReq
-import com.kotlin.order.data.protocol.ShipAddress
+import com.outside.baselibrary.ext.excute
 import com.outside.baselibrary.presenter.BasePresenter
 import com.outside.baselibrary.rx.BaseObserver
+import com.outside.ordercenter.data.protocol.ShipAddress
 import com.outside.ordercenter.presenter.view.EditShipAddressView
 import com.outside.ordercenter.service.ShipAddressService
 import javax.inject.Inject

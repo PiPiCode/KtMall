@@ -7,7 +7,6 @@ import com.outside.baselibrary.injection.module.ActivityModule
 import com.outside.baselibrary.injection.module.LifeCycleProviderModule
 import com.trello.rxlifecycle3.LifecycleProvider
 import dagger.Component
-import javax.inject.Singleton
 
 /**
  * className:    ActivityComponent

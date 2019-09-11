@@ -1,4 +1,4 @@
-package com.kotlin.base.widgets
+package  com.outside.baselibrary.widgets
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,8 +7,8 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.kotlin.base.ext.onClick
 import com.outside.baselibrary.R
+import com.outside.baselibrary.ext.onClick
 
 import kotlinx.android.synthetic.main.layout_header_bar.view.*
 

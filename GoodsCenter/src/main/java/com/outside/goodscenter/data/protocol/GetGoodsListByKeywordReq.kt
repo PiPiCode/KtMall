@@ -1,4 +1,4 @@
-package com.kotlin.goods.data.protocol
+package com.outside.goodscenter.data.protocol
 
 /*
     按关键字搜索商品

@@ -1,4 +1,4 @@
-package com.kotlin.order.data.protocol
+package com.outside.ordercenter.data.protocol
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

@@ -1,4 +1,4 @@
-package com.kotlin.base.ext
+package com.outside.baselibrary.ext
 
 import android.graphics.drawable.AnimationDrawable
 import android.view.View
@@ -6,13 +6,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import com.kennyc.view.MultiStateView
-import com.kotlin.base.utils.GlideUtils
-import com.kotlin.base.widgets.DefaultTextWatcher
 import com.outside.baselibrary.R
 import com.outside.baselibrary.data.protocol.BaseResp
 import com.outside.baselibrary.rx.BaseFunc
 import com.outside.baselibrary.rx.BaseFuncBoolean
 import com.outside.baselibrary.rx.BaseObserver
+import com.outside.baselibrary.utils.GlideUtils
+import com.outside.baselibrary.widgets.DefaultTextWatcher
 import com.trello.rxlifecycle3.LifecycleProvider
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -57,7 +57,7 @@ fun View.onClick(block: () -> Unit) {
 
 fun Button.enable(editText: EditText,method:()->Boolean){
     val btn = this
-    editText.addTextChangedListener(object:DefaultTextWatcher(){
+    editText.addTextChangedListener(object: DefaultTextWatcher(){
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             btn.isEnabled = method()
         }

@@ -1,12 +1,10 @@
-package com.outside.usercenter.injection.component
+package com.outside.ordercenter.injection.component
 
 import com.outside.baselibrary.injection.PerComponentScope
 import com.outside.baselibrary.injection.component.ActivityComponent
-import com.outside.ordercenter.ui.activity.OrderConfirmActivity
+import com.outside.ordercenter.injection.module.ShipAddressModule
 import com.outside.ordercenter.ui.activity.ShipAddressActivity
 import com.outside.ordercenter.ui.activity.ShipAddressEditActivity
-import com.outside.usercenter.injection.module.OrderModule
-import com.outside.usercenter.injection.module.ShipAddressModule
 import dagger.Component
 
 /**

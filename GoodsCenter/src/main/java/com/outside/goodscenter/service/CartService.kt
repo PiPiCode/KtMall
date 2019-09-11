@@ -1,6 +1,6 @@
-package com.kotlin.goods.service
+package com.outside.goodscenter.service
 
-import com.kotlin.goods.data.protocol.CartGoods
+import com.outside.goodscenter.data.protocol.CartGoods
 import io.reactivex.Observable
 
 /*

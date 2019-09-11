@@ -1,9 +1,7 @@
 package com.outside.usercenter.data.api
 
 import com.outside.baselibrary.data.protocol.BaseResp
-import com.outside.usercenter.data.protocol.*
 import io.reactivex.Observable
-import retrofit2.http.Body
 import retrofit2.http.POST
 
 /**

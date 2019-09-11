@@ -1,13 +1,13 @@
 package com.outside.goodscenter.presenter
 
-import com.kotlin.base.ext.excute
-import com.kotlin.base.utils.AppPrefsUtils
-import com.kotlin.goods.common.GoodsConstant
-import com.kotlin.goods.data.protocol.Goods
-import com.kotlin.goods.service.CartService
+import com.outside.baselibrary.ext.excute
 import com.outside.baselibrary.presenter.BasePresenter
 import com.outside.baselibrary.rx.BaseObserver
+import com.outside.baselibrary.utils.AppPrefsUtils
+import com.outside.goodscenter.common.GoodsConstant
+import com.outside.goodscenter.data.protocol.Goods
 import com.outside.goodscenter.presenter.view.GoodsDetailView
+import com.outside.goodscenter.service.CartService
 import com.outside.goodscenter.service.GoodsService
 import javax.inject.Inject
 

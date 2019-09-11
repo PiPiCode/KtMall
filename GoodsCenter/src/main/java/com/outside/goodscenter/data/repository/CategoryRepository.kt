@@ -1,10 +1,10 @@
 package com.outside.goodscenter.data.repository
 
-import com.kotlin.goods.data.api.CategoryApi
-import com.kotlin.goods.data.protocol.Category
-import com.kotlin.goods.data.protocol.GetCategoryReq
 import com.outside.baselibrary.data.net.RetrofitFactory
 import com.outside.baselibrary.data.protocol.BaseResp
+import com.outside.goodscenter.data.api.CategoryApi
+import com.outside.goodscenter.data.protocol.Category
+import com.outside.goodscenter.data.protocol.GetCategoryReq
 import io.reactivex.Observable
 import javax.inject.Inject
 

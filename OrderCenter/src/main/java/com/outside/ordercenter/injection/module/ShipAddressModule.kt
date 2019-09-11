@@ -1,7 +1,8 @@
-package com.outside.usercenter.injection.module
+package com.outside.ordercenter.injection.module
 
-import com.kotlin.goods.service.impl.ShipAddressServiceImpl
+
 import com.outside.ordercenter.service.ShipAddressService
+import com.outside.ordercenter.service.impl.ShipAddressServiceImpl
 import dagger.Module
 import dagger.Provides
 

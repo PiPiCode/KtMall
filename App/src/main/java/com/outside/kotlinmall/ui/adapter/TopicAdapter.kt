@@ -1,11 +1,11 @@
-package com.kotlin.mall.ui.adapter
+package com.outside.kotlinmall.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
-import com.kotlin.base.ext.loadUrl
+import com.outside.baselibrary.ext.loadUrl
 import com.outside.kotlinmall.R
 import kotlinx.android.synthetic.main.layout_topic_item.view.*
 

@@ -1,15 +1,14 @@
 package com.outside.goodscenter.service.impl
 
-import com.kotlin.base.ext.convert
-import com.kotlin.goods.data.protocol.Goods
-import com.kotlin.goods.data.repository.GoodsRepository
-import com.outside.baselibrary.data.protocol.BaseResp
+import com.outside.baselibrary.ext.convert
+import com.outside.goodscenter.data.protocol.Goods
+import com.outside.goodscenter.data.repository.GoodsRepository
 import com.outside.goodscenter.service.GoodsService
 import io.reactivex.Observable
 import javax.inject.Inject
 
 /**
- * className:    CategoryServiceImpl
+ * className:    GoodsServiceImpl
  * description:  描述
  * author:       CLW2018
  * creatTime:    2019/9/2 16:49

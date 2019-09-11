@@ -1,6 +1,6 @@
 package com.outside.usercenter.presenter
 
-import com.kotlin.base.ext.excute
+import com.outside.baselibrary.ext.excute
 import com.outside.baselibrary.presenter.BasePresenter
 import com.outside.baselibrary.rx.BaseObserver
 import com.outside.usercenter.presenter.view.ResetPwdView

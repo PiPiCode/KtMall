@@ -1,9 +1,9 @@
-package com.kotlin.goods.data.repository
+package  com.outside.ordercenter.data.repository
 
-import com.kotlin.order.data.api.OrderApi
-import com.kotlin.order.data.protocol.*
 import com.outside.baselibrary.data.net.RetrofitFactory
 import com.outside.baselibrary.data.protocol.BaseResp
+import com.outside.ordercenter.data.api.OrderApi
+import com.outside.ordercenter.data.protocol.*
 import io.reactivex.Observable
 
 import javax.inject.Inject

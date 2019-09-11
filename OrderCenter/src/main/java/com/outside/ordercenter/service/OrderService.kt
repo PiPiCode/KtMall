@@ -1,7 +1,7 @@
 package com.outside.ordercenter.service
 
-import com.kotlin.order.data.protocol.*
-import com.outside.baselibrary.data.protocol.BaseResp
+import com.outside.ordercenter.data.protocol.GetOrderByIdReq
+import com.outside.ordercenter.data.protocol.Order
 import io.reactivex.Observable
 
 /**

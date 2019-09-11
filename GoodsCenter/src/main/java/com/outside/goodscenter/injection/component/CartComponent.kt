@@ -1,9 +1,9 @@
-package com.outside.usercenter.injection.component
+package com.outside.goodscenter.injection.component
 
 import com.outside.baselibrary.injection.PerComponentScope
 import com.outside.baselibrary.injection.component.ActivityComponent
+import com.outside.goodscenter.injection.module.CartModule
 import com.outside.goodscenter.ui.fragment.CartFragment
-import com.outside.usercenter.injection.module.CartModule
 import dagger.Component
 
 /**

@@ -1,7 +1,5 @@
 package com.outside.usercenter.data.repository
 
-import android.text.style.UpdateAppearance
-import com.kotlin.user.data.protocol.EditUserReq
 import com.outside.baselibrary.data.net.RetrofitFactory
 import com.outside.baselibrary.data.protocol.BaseResp
 import com.outside.usercenter.data.api.UserAPi

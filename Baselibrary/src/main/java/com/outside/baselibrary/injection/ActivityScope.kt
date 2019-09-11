@@ -1,6 +1,5 @@
 package com.outside.baselibrary.injection
 
-import java.lang.annotation.Documented
 import javax.inject.Scope
 
 /**

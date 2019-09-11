@@ -1,28 +1,29 @@
-package com.kotlin.goods.ui.fragment
+package com.outside.goodscenter.ui.fragment
 
 import android.view.Gravity
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
-import com.kotlin.base.ext.onClick
-import com.kotlin.base.utils.YuanFenConverter
-import com.kotlin.base.widgets.BannerImageLoader
-import com.kotlin.goods.common.GoodsConstant
-import com.kotlin.goods.data.protocol.Goods
-import com.kotlin.goods.event.AddCartEvent
-import com.kotlin.goods.event.GoodsDetailImageEvent
-import com.kotlin.goods.event.UpdateCartSizeEvent
-import com.kotlin.goods.widget.GoodsSkuPopView
+import com.outside.baselibrary.ext.onClick
 import com.outside.baselibrary.rx.RxBus
 import com.outside.baselibrary.rx.registerInBus
 import com.outside.baselibrary.ui.activity.BaseActivity
 import com.outside.baselibrary.ui.fragment.BaseMvpFragment
+import com.outside.baselibrary.utils.BannerImageLoader
+import com.outside.baselibrary.utils.YuanFenConverter
 import com.outside.goodscenter.R
+import com.outside.goodscenter.common.GoodsConstant
+import com.outside.goodscenter.data.protocol.Goods
+import com.outside.goodscenter.event.AddCartEvent
+import com.outside.goodscenter.event.GoodsDetailImageEvent
 import com.outside.goodscenter.event.SkuChangedEvent
+import com.outside.goodscenter.event.UpdateCartSizeEvent
+import com.outside.goodscenter.injection.component.DaggerGoodsComponent
+import com.outside.goodscenter.injection.module.GoodsModule
 import com.outside.goodscenter.presenter.GoodsDetailPresenter
 import com.outside.goodscenter.presenter.view.GoodsDetailView
 import com.outside.goodscenter.ui.activity.GoodsDetailActivity
-import com.outside.usercenter.injection.component.DaggerGoodsComponent
-import com.outside.usercenter.injection.module.GoodsModule
+import com.outside.goodscenter.widget.GoodsSkuPopView
+
 
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
@@ -42,7 +43,7 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
     //SKU弹层退场动画
     private lateinit var mAnimationEnd: Animation
 
-    private var mCurGoods:Goods? = null
+    private var mCurGoods: Goods? = null
 
 
     override fun initView() {

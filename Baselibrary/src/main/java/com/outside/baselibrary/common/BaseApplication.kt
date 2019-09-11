@@ -14,7 +14,7 @@ import com.outside.baselibrary.injection.module.AppModule
  * creatTime:    2019/9/3 9:44
  */
 
-class BaseApplication : MultiDexApplication() {
+open class BaseApplication : MultiDexApplication() {
 
     lateinit var appComponent: AppComponent
 

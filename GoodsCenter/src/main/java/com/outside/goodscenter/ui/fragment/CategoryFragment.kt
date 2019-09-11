@@ -2,18 +2,17 @@ package com.outside.goodscenter.ui.fragment
 
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kotlin.base.ext.startLoading
-import com.kotlin.goods.common.GoodsConstant
-import com.kotlin.goods.data.protocol.Category
-import com.kotlin.goods.ui.adapter.SecondCategoryAdapter
-import com.kotlin.goods.ui.adapter.TopCategoryAdapter
+import com.outside.baselibrary.ext.startLoading
 import com.outside.baselibrary.ui.fragment.BaseMvpFragment
 import com.outside.goodscenter.R
+import com.outside.goodscenter.common.GoodsConstant
+import com.outside.goodscenter.data.protocol.Category
+import com.outside.goodscenter.injection.component.DaggerCategoryComponent
+import com.outside.goodscenter.injection.module.CategoryModule
 import com.outside.goodscenter.presenter.CategoryPresenter
 import com.outside.goodscenter.presenter.view.CategoryView
 import com.outside.goodscenter.ui.activity.GoodsActivity
-import com.outside.usercenter.injection.component.DaggerCategoryComponent
-import com.outside.usercenter.injection.module.CategoryModule
+import com.outside.goodscenter.ui.adapter.SecondCategoryAdapter
 import kotlinx.android.synthetic.main.fragment_category.*
 import org.jetbrains.anko.support.v4.startActivity
 
@@ -37,7 +36,9 @@ class CategoryFragment:BaseMvpFragment<CategoryPresenter>() ,CategoryView{
     }
 
     override fun injectComponent() {
-        DaggerCategoryComponent.builder().activityComponent(activityComponent).categoryModule(CategoryModule())
+        DaggerCategoryComponent.builder().activityComponent(activityComponent).categoryModule(
+            CategoryModule()
+        )
             .build().inject(this)
         mPresenter.mView = this
 
@@ -62,7 +63,7 @@ class CategoryFragment:BaseMvpFragment<CategoryPresenter>() ,CategoryView{
         mSecondCategoryRv.layoutManager = GridLayoutManager(context, 3)
         secondAdapter = SecondCategoryAdapter(context!!)
         mSecondCategoryRv.adapter = secondAdapter
-        secondAdapter.onItemClick { item, position ->
+        secondAdapter.onItemClick { item, _ ->
             startActivity<GoodsActivity>(GoodsConstant.KEY_CATEGORY_ID  to item.id)
         }
 

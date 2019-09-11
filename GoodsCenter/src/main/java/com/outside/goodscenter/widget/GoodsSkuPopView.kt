@@ -1,23 +1,22 @@
-package com.kotlin.goods.widget
+package com.outside.goodscenter.widget
 
-import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup.LayoutParams
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
-import com.kotlin.base.ext.loadUrl
-import com.kotlin.base.ext.onClick
-import com.kotlin.base.utils.YuanFenConverter
-import com.kotlin.base.widgets.DefaultTextWatcher
-import com.kotlin.goods.common.GoodsConstant
-import com.kotlin.goods.data.protocol.GoodsSku
-import com.kotlin.goods.event.AddCartEvent
+import com.outside.baselibrary.ext.loadUrl
+import com.outside.baselibrary.ext.onClick
+
 import com.outside.baselibrary.rx.RxBus
+import com.outside.baselibrary.utils.YuanFenConverter
+import com.outside.baselibrary.widgets.DefaultTextWatcher
 import com.outside.goodscenter.R
+import com.outside.goodscenter.common.GoodsConstant
+import com.outside.goodscenter.data.protocol.GoodsSku
+import com.outside.goodscenter.event.AddCartEvent
 import com.outside.goodscenter.event.SkuChangedEvent
 
 import kotlinx.android.synthetic.main.layout_sku_pop.view.*

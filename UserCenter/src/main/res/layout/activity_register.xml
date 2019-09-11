@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/MatchMatch.Vertical.Common">
 
-    <com.kotlin.base.widgets.HeaderBar
+    <com.outside.baselibrary.widgets.HeaderBar
         android:id="@+id/mHeaderBar"
         style="@style/MatchWrap"
         app:titleText="注册" />
@@ -29,7 +29,7 @@
 
             <View style="@style/DividerFixedWidth.MarginTopBottom" />
 
-            <com.kotlin.base.widgets.VerifyButton
+            <com.outside.baselibrary.widgets.VerifyButton
                 android:id="@+id/mVerifyCodeBtn"
                 style="@style/WrapMatch"
                 android:background="@null"

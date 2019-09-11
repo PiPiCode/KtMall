@@ -1,7 +1,7 @@
 package com.outside.goodscenter.presenter.view
 
-import com.kotlin.goods.data.protocol.Category
 import com.outside.baselibrary.presenter.view.BaseView
+import com.outside.goodscenter.data.protocol.Category
 
 /**
  * className:    RegisterView

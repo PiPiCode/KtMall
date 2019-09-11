@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.outside.baselibrary.ui.activity.BaseActivity
 import com.outside.goodscenter.R
 import com.outside.goodscenter.ui.fragment.CartFragment
-import kotlinx.android.synthetic.main.fragment_cart.*
+
 
 
 /**

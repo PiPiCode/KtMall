@@ -1,14 +1,14 @@
-package com.kotlin.goods.ui.adapter
+package com.outside.goodscenter.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kotlin.base.ext.loadUrl
-import com.kotlin.base.ui.adapter.BaseRecyclerViewAdapter
-import com.kotlin.goods.data.protocol.Category
+import com.outside.baselibrary.ext.loadUrl
+import com.outside.baselibrary.ui.adapter.BaseRecyclerViewAdapter
 import com.outside.goodscenter.R
+import com.outside.goodscenter.data.protocol.Category
 import kotlinx.android.synthetic.main.layout_second_category_item.view.*
 
 /*

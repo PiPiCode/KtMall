@@ -1,12 +1,12 @@
-package com.kotlin.order.ui.activity
+package com.outside.ordercenter.ui.activity
 
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayout
-import com.kotlin.order.common.OrderConstant
-import com.kotlin.order.common.OrderStatus
-import com.kotlin.order.ui.adapter.OrderVpAdapter
 import com.outside.baselibrary.ui.activity.BaseActivity
 import com.outside.ordercenter.R
+import com.outside.ordercenter.common.OrderConstant
+import com.outside.ordercenter.common.OrderStatus
+import com.outside.ordercenter.ui.adapter.OrderVpAdapter
 import kotlinx.android.synthetic.main.activity_order.*
 
 /*
@@ -29,7 +29,7 @@ class OrderActivity: BaseActivity() {
         mOrderTab.setupWithViewPager(mOrderVp)
 
         //根据订单状态设置当前页面
-        mOrderVp.currentItem = intent.getIntExtra(OrderConstant.KEY_ORDER_STATUS,OrderStatus.ORDER_ALL)
+        mOrderVp.currentItem = intent.getIntExtra(OrderConstant.KEY_ORDER_STATUS, OrderStatus.ORDER_ALL)
     }
 
 

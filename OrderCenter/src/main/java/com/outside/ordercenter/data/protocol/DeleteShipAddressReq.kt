@@ -1,4 +1,4 @@
-package com.kotlin.order.data.protocol
+package com.outside.ordercenter.data.protocol
 
 /*
     刪除收货地址

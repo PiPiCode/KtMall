@@ -1,4 +1,4 @@
-package com.kotlin.goods.widget
+package com.outside.goodscenter.widget
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
-import com.kotlin.goods.common.GoodsConstant
-import com.kotlin.goods.data.protocol.GoodsSku
 import com.outside.baselibrary.rx.RxBus
 import com.outside.goodscenter.R
+import com.outside.goodscenter.common.GoodsConstant
+import com.outside.goodscenter.data.protocol.GoodsSku
 import com.outside.goodscenter.event.SkuChangedEvent
 import com.zhy.view.flowlayout.TagAdapter
 import kotlinx.android.synthetic.main.layout_sku_view.view.*

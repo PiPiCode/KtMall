@@ -1,11 +1,11 @@
-package com.kotlin.goods.ui.fragment
+package com.outside.goodscenter.ui.fragment
 
-import com.kotlin.base.ext.loadUrl
-import com.kotlin.goods.event.GoodsDetailImageEvent
+import com.outside.baselibrary.ext.loadUrl
 import com.outside.baselibrary.rx.RxBus
 import com.outside.baselibrary.rx.registerInBus
 import com.outside.baselibrary.ui.fragment.BaseFragment
 import com.outside.goodscenter.R
+import com.outside.goodscenter.event.GoodsDetailImageEvent
 import kotlinx.android.synthetic.main.fragment_goods_detail_tab_two.*
 
 /*

@@ -1,9 +1,9 @@
 package com.outside.goodscenter.presenter
 
-import com.kotlin.base.ext.excute
-import com.kotlin.goods.data.protocol.Category
+import com.outside.baselibrary.ext.excute
 import com.outside.baselibrary.presenter.BasePresenter
 import com.outside.baselibrary.rx.BaseObserver
+import com.outside.goodscenter.data.protocol.Category
 import com.outside.goodscenter.presenter.view.CategoryView
 import com.outside.goodscenter.service.CategoryService
 

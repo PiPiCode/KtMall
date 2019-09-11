@@ -1,10 +1,10 @@
-package com.kotlin.goods.service.impl
+package com.outside.goodscenter.service.impl
 
-import com.kotlin.base.ext.convert
-import com.kotlin.base.ext.convertBoolean
-import com.kotlin.goods.data.protocol.CartGoods
-import com.kotlin.goods.data.repository.CartRepository
-import com.kotlin.goods.service.CartService
+import com.outside.baselibrary.ext.convert
+import com.outside.baselibrary.ext.convertBoolean
+import com.outside.goodscenter.data.protocol.CartGoods
+import com.outside.goodscenter.data.repository.CartRepository
+import com.outside.goodscenter.service.CartService
 import io.reactivex.Observable
 import javax.inject.Inject
 

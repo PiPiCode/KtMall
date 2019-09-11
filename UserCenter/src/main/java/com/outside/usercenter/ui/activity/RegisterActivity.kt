@@ -1,8 +1,8 @@
 package com.outside.usercenter.ui.activity
 
 import android.view.View
-import com.kotlin.base.ext.enable
-import com.kotlin.base.ext.onClick
+import com.outside.baselibrary.ext.enable
+import com.outside.baselibrary.ext.onClick
 import com.outside.baselibrary.ui.activity.BaseMvpActivity
 import com.outside.usercenter.R
 import com.outside.usercenter.injection.component.DaggerUserComponent

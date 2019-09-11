@@ -1,17 +1,18 @@
 package com.outside.goodscenter.ui.activity
 
-import com.kotlin.goods.data.protocol.Goods
 import com.outside.baselibrary.ui.activity.BaseMvpActivity
 import com.outside.goodscenter.presenter.GoodsListPresenter
 import com.outside.goodscenter.presenter.view.GoodsView
-import com.outside.usercenter.injection.component.DaggerGoodsComponent
-import com.outside.usercenter.injection.module.GoodsModule
+
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kennyc.view.MultiStateView
-import com.kotlin.base.ext.startLoading
-import com.kotlin.goods.common.GoodsConstant
-import com.kotlin.goods.ui.adapter.GoodsAdapter
+import com.outside.baselibrary.ext.startLoading
 import com.outside.goodscenter.R
+import com.outside.goodscenter.common.GoodsConstant
+import com.outside.goodscenter.data.protocol.Goods
+import com.outside.goodscenter.injection.component.DaggerGoodsComponent
+import com.outside.goodscenter.injection.module.GoodsModule
+import com.outside.goodscenter.ui.adapter.GoodsAdapter
 import kotlinx.android.synthetic.main.activity_goods.*
 import org.jetbrains.anko.startActivity
 

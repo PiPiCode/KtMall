@@ -1,12 +1,12 @@
-package com.kotlin.goods.ui.adapter
+package com.outside.goodscenter.ui.adapter
 
 import android.content.Context
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.kotlin.goods.ui.fragment.GoodsDetailTabOneFragment
-import com.kotlin.goods.ui.fragment.GoodsDetailTabTwoFragment
+import com.outside.goodscenter.ui.fragment.GoodsDetailTabOneFragment
+import com.outside.goodscenter.ui.fragment.GoodsDetailTabTwoFragment
 
 /*
     商品详情ViewPager Adapter

@@ -7,7 +7,7 @@
         app:cardCornerRadius="@dimen/common_radius"
         app:cardElevation="2.0dip">
     <LinearLayout style="@style/MatchWrap.Vertical">
-        <com.kotlin.base.widgets.RoundRectImageView
+        <com.outside.baselibrary.widgets.RoundRectImageView
                 android:id="@+id/mTopicIv"
                 android:layout_width="200.0dip"
                 android:layout_height="120.0dip"

@@ -1,12 +1,12 @@
-package com.kotlin.order.ui.adapter
+package com.outside.ordercenter.ui.adapter
 
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.kotlin.order.common.OrderConstant
-import com.kotlin.order.ui.fragment.OrderFragment
+import com.outside.ordercenter.common.OrderConstant
+import com.outside.ordercenter.ui.fragment.OrderFragment
 
 /*
     订单Tab对应ViewPager

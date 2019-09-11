@@ -1,10 +1,10 @@
-package com.kotlin.mall.ui.activity
+package com.outside.kotlinmall.ui.activity
 
 import android.os.Bundle
-import com.kotlin.base.ext.onClick
-import com.kotlin.user.utils.UserPrefsUtils
+import com.outside.baselibrary.ext.onClick
 import com.outside.baselibrary.ui.activity.BaseActivity
 import com.outside.kotlinmall.R
+import com.outside.usercenter.utils.UserPrefsUtils
 import kotlinx.android.synthetic.main.activity_setting.*
 import org.jetbrains.anko.toast
 

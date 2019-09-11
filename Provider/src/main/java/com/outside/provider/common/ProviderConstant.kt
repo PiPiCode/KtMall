@@ -1,4 +1,4 @@
-package com.kotlin.provider.common
+package com.outside.provider.common
 
 /**
  * className:    ProviderConstant

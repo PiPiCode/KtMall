@@ -9,7 +9,7 @@ import android.widget.LinearLayout
 import android.widget.EditText
 import android.view.LayoutInflater
 import android.text.method.DigitsKeyListener
-import com.kotlin.base.ext.onClick
+import com.outside.baselibrary.ext.onClick
 import com.outside.goodscenter.R
 import kotlinx.android.synthetic.main.layout_number_button.view.*
 import kotlin.math.min

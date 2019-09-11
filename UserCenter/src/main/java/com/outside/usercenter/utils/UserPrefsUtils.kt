@@ -1,8 +1,8 @@
-package com.kotlin.user.utils
+package com.outside.usercenter.utils
 
-import com.kotlin.base.utils.AppPrefsUtils
-import com.kotlin.provider.common.ProviderConstant
 import com.outside.baselibrary.common.BaseConstant
+import com.outside.baselibrary.utils.AppPrefsUtils
+import com.outside.provider.common.ProviderConstant
 import com.outside.usercenter.data.protocol.UserInfo
 
 

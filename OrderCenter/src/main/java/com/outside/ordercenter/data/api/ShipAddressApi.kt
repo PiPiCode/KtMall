@@ -1,11 +1,8 @@
-package com.kotlin.order.data.api
+package com.outside.ordercenter.data.api
 
 import retrofit2.http.POST
-import com.kotlin.order.data.protocol.AddShipAddressReq
-import com.kotlin.order.data.protocol.DeleteShipAddressReq
-import com.kotlin.order.data.protocol.EditShipAddressReq
-import com.kotlin.order.data.protocol.ShipAddress
 import com.outside.baselibrary.data.protocol.BaseResp
+import com.outside.ordercenter.data.protocol.*
 import io.reactivex.Observable
 import retrofit2.http.Body
 

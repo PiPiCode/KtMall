@@ -1,4 +1,4 @@
-package com.kotlin.goods.common
+package com.outside.goodscenter.common
 
 /*
     商品模块 常量

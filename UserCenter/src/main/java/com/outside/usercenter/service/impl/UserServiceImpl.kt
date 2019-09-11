@@ -1,15 +1,11 @@
 package com.outside.usercenter.service.impl
 
-import com.kotlin.base.ext.convert
-import com.kotlin.base.ext.convertBoolean
-import com.outside.baselibrary.data.protocol.BaseResp
-import com.outside.baselibrary.rx.BaseException
-import com.outside.baselibrary.rx.BaseFuncBoolean
+import com.outside.baselibrary.ext.convert
+import com.outside.baselibrary.ext.convertBoolean
 import com.outside.usercenter.data.protocol.UserInfo
 import com.outside.usercenter.data.repository.UserRepository
 import com.outside.usercenter.service.UserService
 import io.reactivex.Observable
-import io.reactivex.functions.Function
 import javax.inject.Inject
 
 /**

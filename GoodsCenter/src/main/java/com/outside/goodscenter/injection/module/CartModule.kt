@@ -1,7 +1,7 @@
-package com.outside.usercenter.injection.module
+package com.outside.goodscenter.injection.module
 
-import com.kotlin.goods.service.CartService
-import com.kotlin.goods.service.impl.CartServiceImpl
+import com.outside.goodscenter.service.CartService
+import com.outside.goodscenter.service.impl.CartServiceImpl
 import dagger.Module
 import dagger.Provides
 

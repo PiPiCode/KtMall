@@ -1,4 +1,4 @@
-package com.kotlin.order.ui.adapter
+package com.outside.ordercenter.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.kotlin.base.ext.loadUrl
-import com.kotlin.base.ext.onClick
-import com.kotlin.base.ext.setVisible
-import com.kotlin.base.ui.adapter.BaseRecyclerViewAdapter
-import com.kotlin.base.utils.YuanFenConverter
-import com.kotlin.order.common.OrderConstant
-import com.kotlin.order.common.OrderStatus
-import com.kotlin.order.data.protocol.Order
+import com.outside.baselibrary.ext.loadUrl
+import com.outside.baselibrary.ext.onClick
+import com.outside.baselibrary.ext.setVisible
+import com.outside.baselibrary.ui.adapter.BaseRecyclerViewAdapter
+import com.outside.baselibrary.utils.YuanFenConverter
 import com.outside.ordercenter.R
+import com.outside.ordercenter.common.OrderConstant
+import com.outside.ordercenter.common.OrderStatus
+import com.outside.ordercenter.data.protocol.Order
 import kotlinx.android.synthetic.main.activity_order_confirm.view.mBottomView
 import kotlinx.android.synthetic.main.layout_order_item.view.*
 import org.jetbrains.anko.dip
